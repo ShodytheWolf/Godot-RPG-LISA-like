@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" uid="uid://ciqongiesj53n" path="res://Sprites/Terrain/pasto1repe.png" id="1_efxec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_podjc"]
+size = Vector2(33, 32)
+
+[node name="Piso1" type="Node2D"]
+texture_repeat = 2
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_podjc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 17.0
+offset_bottom = 16.0
+texture = ExtResource("1_efxec")
+stretch_mode = 1

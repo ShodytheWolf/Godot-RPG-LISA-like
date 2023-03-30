@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://do1xa3fqqiccn"]
+
+[ext_resource type="Script" path="res://src/DialogPlayer.gd" id="1_3lsfs"]
+[ext_resource type="Texture2D" uid="uid://cie6ndlspa80u" path="res://Sprites/GUI/DialogBox.png" id="1_um7jh"]
+[ext_resource type="LabelSettings" uid="uid://7yi0enqop56x" path="res://Sprites/Fonts/VCR OSD MONO.tres" id="2_s1pu2"]
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_3lsfs")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 321.0
+offset_top = 464.0
+offset_right = 821.0
+offset_bottom = 614.0
+texture = ExtResource("1_um7jh")
+
+[node name="TextLabel" type="Label" parent="."]
+offset_left = 321.0
+offset_top = 465.0
+offset_right = 821.0
+offset_bottom = 615.0
+label_settings = ExtResource("2_s1pu2")
+autowrap_mode = 3

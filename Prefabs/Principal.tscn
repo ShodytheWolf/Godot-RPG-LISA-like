@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxkxstixa3efi"]
+
+[ext_resource type="PackedScene" uid="uid://chresgpwr488t" path="res://Prefabs/Terrains/caja.tscn" id="2_erjm1"]
+[ext_resource type="PackedScene" path="res://Prefabs/Terrains/pisoTierraMedio.tscn" id="3_0fgok"]
+[ext_resource type="PackedScene" path="res://Prefabs/Player.tscn" id="3_vi1lh"]
+[ext_resource type="PackedScene" path="res://Prefabs/Terrains/pisoTierraPlataforma.tscn" id="4_dyrjp"]
+[ext_resource type="PackedScene" uid="uid://cnteag5t3obaf" path="res://Prefabs/Dialog/DialogArea.tscn" id="6_e7aq7"]
+[ext_resource type="Texture2D" uid="uid://boty8hipldt41" path="res://Sprites/basil cara/feliz sonriendo.png" id="6_hkqb8"]
+[ext_resource type="PackedScene" uid="uid://do1xa3fqqiccn" path="res://Prefabs/Dialog/DialogPlayer.tscn" id="7_uber2"]
+[ext_resource type="PackedScene" uid="uid://doqk7iy2h1sf7" path="res://Prefabs/GUI/MenuGame.tscn" id="8_6m1g2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnnh"]
+size = Vector2(127, 126)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("3_vi1lh")]
+position = Vector2(515, 239)
+scale = Vector2(4, 4)
+
+[node name="Caja" parent="." instance=ExtResource("2_erjm1")]
+position = Vector2(333, 356)
+
+[node name="Caja2" parent="." instance=ExtResource("2_erjm1")]
+position = Vector2(331, 204)
+
+[node name="Caja3" parent="." instance=ExtResource("2_erjm1")]
+position = Vector2(331, 8)
+
+[node name="Piso1" parent="." instance=ExtResource("3_0fgok")]
+position = Vector2(-96, 558)
+scale = Vector2(2, 2)
+
+[node name="Piso2" parent="Piso1" instance=ExtResource("3_0fgok")]
+position = Vector2(352.5, 0)
+
+[node name="Piso2" parent="." instance=ExtResource("3_0fgok")]
+position = Vector2(1315, 558)
+scale = Vector2(2, 2)
+
+[node name="Piso2" parent="Piso2" instance=ExtResource("3_0fgok")]
+position = Vector2(352.5, 0)
+
+[node name="Plataforma1" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(1630, 431)
+scale = Vector2(2, 2)
+
+[node name="Plataforma2" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(2047, 229)
+scale = Vector2(2, 2)
+
+[node name="Plataforma3" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(2470, 225)
+scale = Vector2(2, 2)
+
+[node name="Plataforma4" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(3564, 338)
+rotation = -0.312947
+scale = Vector2(2, 2)
+
+[node name="Plataforma5" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(4003, 235)
+rotation = -0.674918
+scale = Vector2(2, 2)
+
+[node name="Plataforma6" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(4311, 277)
+rotation = 1.5708
+scale = Vector2(2, 2)
+
+[node name="Plataforma7" parent="." instance=ExtResource("4_dyrjp")]
+position = Vector2(2886, 228)
+scale = Vector2(2, 2)
+
+[node name="DialogAreaCartel" parent="." instance=ExtResource("6_e7aq7")]
+process_priority = -1
+position = Vector2(1073, 456)
+dialog_key = "cartel"
+
+[node name="CollisionShape2D" parent="DialogAreaCartel" index="0"]
+position = Vector2(0.5, -5)
+shape = SubResource("RectangleShape2D_0tnnh")
+
+[node name="Icon" type="Sprite2D" parent="DialogAreaCartel"]
+position = Vector2(151, -15)
+scale = Vector2(1.63208, 1.63208)
+texture = ExtResource("6_hkqb8")
+
+[node name="DialogPlayer" parent="." instance=ExtResource("7_uber2")]
+sceneTextFile = "res://Prefabs/Dialog/test.json"
+
+[node name="menuGame" parent="." instance=ExtResource("8_6m1g2")]
+process_mode = 2
+process_priority = 1
+visible = false
+
+[editable path="DialogAreaCartel"]

@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://doqk7iy2h1sf7"]
+
+[ext_resource type="LabelSettings" uid="uid://7yi0enqop56x" path="res://Sprites/Fonts/VCR OSD MONO.tres" id="1_3yl76"]
+[ext_resource type="Script" path="res://Prefabs/GUI/MenuGame.gd" id="1_7ui7v"]
+[ext_resource type="PackedScene" uid="uid://becvq1rwmcqcf" path="res://Prefabs/GUI/MenuCursor.tscn" id="2_a4cuv"]
+[ext_resource type="Script" path="res://src/MenuItem.gd" id="2_fn4ge"]
+
+[node name="menuGame" type="CanvasLayer"]
+script = ExtResource("1_7ui7v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="MargenPadre" type="MarginContainer" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 193.0
+offset_bottom = 367.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MargenPadre"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Inventory" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="Equipment" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Equipment"
+label_settings = ExtResource("1_3yl76")
+script = ExtResource("2_fn4ge")
+
+[node name="Skills" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Skills"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="Map" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Map"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="Status" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Status"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="Options" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="Quit" type="Label" parent="MargenPadre/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+label_settings = ExtResource("1_3yl76")
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_fn4ge")
+
+[node name="TextureRect" parent="." instance=ExtResource("2_a4cuv")]
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 37.0
+offset_bottom = 41.0
+menuParentPath = NodePath("../MargenPadre/VBoxContainer")
