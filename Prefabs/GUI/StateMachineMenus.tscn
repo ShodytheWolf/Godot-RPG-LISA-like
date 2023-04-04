@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://46dvifjyt0qe"]
+
+[ext_resource type="Script" path="res://src/StateMachines/StateMachine.gd" id="1_u0t3t"]
+[ext_resource type="Script" path="res://src/StateMachines/DialogMenuState.gd" id="2_ich67"]
+[ext_resource type="Script" path="res://src/StateMachines/IdleMenuState.gd" id="3_e7u01"]
+
+[node name="ManejadorMenus" type="Node2D"]
+script = ExtResource("1_u0t3t")
+initialState = NodePath("Idle")
+
+[node name="Dialog" type="Node" parent="."]
+script = ExtResource("2_ich67")
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource("3_e7u01")

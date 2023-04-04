@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://doqk7iy2h1sf7"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="LabelSettings" uid="uid://7yi0enqop56x" path="res://Sprites/Fonts/VCR OSD MONO.tres" id="1_3yl76"]
-[ext_resource type="Script" path="res://Prefabs/GUI/MenuGame.gd" id="1_7ui7v"]
+[ext_resource type="Script" path="res://src/MenuGame.gd" id="1_7ui7v"]
 [ext_resource type="PackedScene" uid="uid://becvq1rwmcqcf" path="res://Prefabs/GUI/MenuCursor.tscn" id="2_a4cuv"]
 [ext_resource type="Script" path="res://src/MenuItem.gd" id="2_fn4ge"]
 

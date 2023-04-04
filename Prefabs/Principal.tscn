@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnteag5t3obaf" path="res://Prefabs/Dialog/DialogArea.tscn" id="6_e7aq7"]
 [ext_resource type="Texture2D" uid="uid://boty8hipldt41" path="res://Sprites/basil cara/feliz sonriendo.png" id="6_hkqb8"]
 [ext_resource type="PackedScene" uid="uid://do1xa3fqqiccn" path="res://Prefabs/Dialog/DialogPlayer.tscn" id="7_uber2"]
-[ext_resource type="PackedScene" uid="uid://doqk7iy2h1sf7" path="res://Prefabs/GUI/MenuGame.tscn" id="8_6m1g2"]
+[ext_resource type="PackedScene" path="res://Prefabs/GUI/MenuGame.tscn" id="8_6m1g2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnnh"]
 size = Vector2(127, 126)
